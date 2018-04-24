@@ -213,7 +213,7 @@ def results(cl):
         for res in cl.result_list:
             yield (res.pk, get_parent_id(res), res.get_depth(),
                    res.get_children_count(),
-                   list(items_for_result(cl, res, None)))
+                   list(items_for_result(cl, res, None)), res)
 
 
 def check_empty_dict(GET_dict):
